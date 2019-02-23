@@ -16,11 +16,15 @@ Digital acknowledgement: Tuan Le
 2. Elizabeth is the banking CEO at 13/37th National Bank and the URL is 
 1337bank.money, the ip is 142.93.136.81
 
-3. Twitter @v0idcache - I used Intel Techniques to find Usersherlock. I then 
+3. I obtained 2 accounts.
+
+Twitter @v0idcache - I used Intel Techniques to find Usersherlock. I then 
 used Usersherlock to search for the username and found the Twitter account.
+
 Reddit u/v0idcache - I just googled v0idcache
 
 4. I used dnsdumpster to obtain 5 ips and used Shodan to find information for each
+
 216.87.155.33 - United States, VeriSign Infrastructure & Operations
 216.87.152.33 - United States, VeriSing Infrastrcuture & Operations
 142.93.136.81 - New York, United States, Digital Ocean
@@ -48,6 +52,7 @@ Ubuntu Linux
 
 CMSC389R-{h1ding_fil3s_in_r0bots_L0L} - Found by running 1337bank.money/robots.txt
 then I found "Disallow: / secret_directory. I then ran 1337bank.money/secret_directory
+
 CMSC389R-{h0w_2_iNt0_DNS_r3c0Rd5} - Found by using dnsdumpster with 1337bank.money
 
 CMSC389R-{0M3G4LUL_G3T_pWN3d_N00b} - Found by just googling v0idcache and finding a
