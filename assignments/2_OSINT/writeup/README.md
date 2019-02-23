@@ -29,6 +29,7 @@ Reddit u/v0idcache - I just googled v0idcache
 
 5. The 2 distinct flags
 CMSC389R-{h1dd3n_1n_plain_5ight} - Found by looking at page source
+
 CMSC389R-{e@5y_p3@5y-s0urc3_l3ak} - Found by looking at page source and further
 examining the source of authenticate, control searched for "password" and found
 username and password.
@@ -45,7 +46,9 @@ Ubuntu Linux
 8. I found 3 other flags
 CMSC389R-{h1ding_fil3s_in_r0bots_L0L} - Found by running 1337bank.money/robots.txt
 then I found "Disallow: / secret_directory. I then ran 1337bank.money/secret_directory
+
 CMSC389R-{h0w_2_iNt0_DNS_r3c0Rd5} - Found by using dnsdumpster with 1337bank.money
+
 CMSC389R-{0M3G4LUL_G3T_pWN3d_N00b} - Found by just googling v0idcache and finding a
 reddit post 
 
