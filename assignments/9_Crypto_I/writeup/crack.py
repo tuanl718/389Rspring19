@@ -12,9 +12,11 @@ def crack():
     # Open and read passwords.txt
     with open("passwords.txt", "r") as p:
         passwords = p.read().splitlines()
-    
+
+    # ASCII Lowercase letters
     characters = string.ascii_lowercase
 
+    # Prepend lowercase letter to a word in passwords
     for c in characters:
         for p in passwords:
             

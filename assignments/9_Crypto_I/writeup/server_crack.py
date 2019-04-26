@@ -14,23 +14,24 @@ def server_crack():
     # Open and read passwords.txt
     with open("passwords.txt", "r") as p:
         passwords = p.read().splitlines()
-    
+
+    # ASCII Lowercase letters
     characters = string.ascii_lowercase
+
+    # Server information
     server_ip = "134.209.128.58"
     server_port = 1337
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((server_ip, server_port))
-    # data = s.recv(1024)
-    # time.sleep(0.1)
-
-    # parse data
-    # crack 3 times
+    
+    # Parse data and crack 3 times
     for i in range(0,3):
         
         data = s.recv(1024)
         time.sleep(0.2)
-        
+
+        # Prepend lowercase letter to a word in passwords
         for c in characters:
             for p in passwords:
             
@@ -45,6 +46,7 @@ def server_crack():
                     s.send(new_password+"\n")
                     time.sleep(0.2)
 
+    # Obtain flag after 3 successful cracks
     data = s.recv(1024)
     time.sleep(0.2)
     print data
