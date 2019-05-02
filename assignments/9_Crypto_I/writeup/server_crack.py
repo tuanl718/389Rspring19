@@ -21,7 +21,6 @@ def server_crack():
     # Server information
     server_ip = "134.209.128.58"
     server_port = 1337
-
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((server_ip, server_port))
     
