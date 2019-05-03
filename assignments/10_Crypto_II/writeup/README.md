@@ -18,14 +18,6 @@ I created a new file called 'signature.txt' using vim. In the file I typed 'My n
 signature.txt --sign signature.txt'. I then did 'gpg --clearsign signature.txt'. After this, I had to remove the file 'signature.txt'
 so only the file 'signature.txt.asc' remains. 
 
-The following is the result of running 'gpg --list-secret-keys`
-/root/.gnupg/pubring.kbx
-------------------------
-sec   rsa4096 2019-04-26 [SC]
-      86C4EE37A26779DFDE318CE72CDD23F9C7D32E64
-uid           [ unknown] CMSC389R <fake@email.com>
-ssb   rsa4096 2019-04-26 [E]
-
 ![](screenshot.png)
 
 
